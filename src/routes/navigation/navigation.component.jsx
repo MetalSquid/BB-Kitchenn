@@ -1,5 +1,5 @@
 import { Fragment, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
@@ -29,18 +29,14 @@ const Navigation = () => {
           <CrwnLogo className="logo" />
         </LogoContainer>
         <NavLinks>
-          <NavLink to="/shop">
-            SHOP
-          </NavLink>
+          <NavLink to="/shop">SHOP</NavLink>
 
           {currentUser ? (
             <span className="nav-link" onClick={signOutUser}>
               SIGN OUT
             </span>
           ) : (
-            <NavLink to="/auth">
-              SIGN IN
-            </NavLink>
+            <NavLink to="/auth">SIGN IN</NavLink>
           )}
           <CartIcon />
         </NavLinks>
